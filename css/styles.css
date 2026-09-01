@@ -21,3 +21,11 @@ a{
 .musicBtn{
     text-align: center;
 }
+
+.inverted{
+    filter: invert(100%);
+}
+
+.inverted img{
+    filter: invert(100%);
+}

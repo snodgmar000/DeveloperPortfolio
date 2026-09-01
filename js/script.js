@@ -10,3 +10,8 @@ playBtn.addEventListener("click", function () {
         playBtn.textContent = "Play";
     }
 });
+
+const darkBtn = document.getElementById("darkBtn");
+darkBtn.addEventListener("click", function () {
+    document.body.classList.toggle("inverted");
+});
