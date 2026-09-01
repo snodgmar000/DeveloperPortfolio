@@ -1,7 +1,13 @@
-body{
+body {
     background-color: blueviolet;
     color: whitesmoke;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode {
+    background-color: #111827;
+    color: #f3f4f6;
 }
 
 .title {
@@ -9,23 +15,36 @@ body{
     background-color: black;
 }
 
+body.dark-mode .title {
+    background-color: #1f2937;
+}
+
 .links {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: darkblue;
 }
-a{
+
+body.dark-mode .links {
+    background-color: #1e3a5f;
+}
+
+a {
     color: wheat;
 }
 
-.musicBtn{
+body.dark-mode a {
+    color: #dbeafe;
+}
+
+.musicBtn {
     text-align: center;
 }
 
-.inverted{
-    filter: invert(100%);
+button {
+    cursor: pointer;
 }
 
-.inverted img{
-    filter: invert(100%);
+body.dark-mode img {
+    filter: brightness(0.9) contrast(1.1);
 }
