@@ -13,10 +13,17 @@ if (playBtn && music) {
     });
 }
 
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+} else {
+    document.body.classList.remove("dark-mode");
+}
 const darkBtn = document.getElementById("darkBtn");
 if (darkBtn) {
     darkBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
         darkBtn.textContent = document.body.classList.contains("dark-mode")
             ? "Light Mode"
             : "Dark Mode";

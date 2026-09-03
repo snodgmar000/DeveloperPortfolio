@@ -2,7 +2,6 @@ body {
     background-color: blueviolet;
     color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 body.dark-mode {
