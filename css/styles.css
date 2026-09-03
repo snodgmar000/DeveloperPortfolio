@@ -47,3 +47,18 @@ button {
 body.dark-mode img {
     filter: brightness(0.9) contrast(1.1);
 }
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+body.dark-mode table th, body.dark-mode table td {
+    border-color: #4b5563;
+}
