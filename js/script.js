@@ -1,9 +1,25 @@
 const music = document.getElementById("music");
 const playBtn = document.getElementById("playBtn");
+const tracks = [
+    "audio/01 Full Moon Full Life.mp3",
+    "audio/01. Pursuing My True Self.mp3",
+    "audio/08. Your Affection.mp3",
+    "audio/10 When The Moon\u2019s Reaching Out Stars -Reload-.mp3",
+    "audio/11. Reach Out to the Truth -First Battle-.mp3",
+    "audio/14 Mass Destruction -Reload-.mp3",
+    "audio/25 During the Exams.mp3",
+    "audio/27 Joy.mp3",
+    "audio/30 It\u2019s Going Down Now.mp3",
+    "audio/33 Changing Seasons -Reload-.mp3",
+    "audio/52 Battle Hymn of the Soul.mp3",
+    "audio/colorYourNight.mp3"
+];
 
 if (playBtn && music) {
     playBtn.addEventListener("click", function () {
         if (music.paused) {
+            const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+            music.src = randomTrack;
             music.play();
             playBtn.textContent = "Pause";
         } else {
