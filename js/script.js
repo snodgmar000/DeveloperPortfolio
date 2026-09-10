@@ -45,3 +45,15 @@ if (darkBtn) {
             : "Dark Mode";
     });
 }
+
+const openBtn = document.getElementById("openbtn");
+const closeBtn = document.getElementById("closebtn");
+const popup = document.querySelector(".popup");
+openBtn.addEventListener("click", () => {
+    popup.style.display = "block";
+    openBtn.style.display = "none";
+});
+closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    openBtn.style.display = "block";
+});
