@@ -24,15 +24,44 @@
         <a href="journal.html">My journal!!</a>
     </div>
     <h1 class="title">Projects!!!</h1>
-    <p class="title">Nothing here... yet!</p>
-    <div class = "outer">
-        <div class="popup">
-            <i class="inner"></i>
-            <h2>test :3</h2>
-            <br />
-            <button id="closebtn">Close</button>
-        </div>
-        <button id="openbtn">test popup</button>
+    <p class="title">Filter projects by programming language.</p>
+    <div class="project-filters" aria-label="Filter projects by programming language">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" type="button" data-filter="python">Python</button>
+        <button class="filter-btn" type="button" data-filter="html">HTML/CSS</button>
+    </div>
+    <div class="project-list">
+        <article class="project-item" data-languages="javascript html css">
+            <div class="popup">
+                <i class="inner"></i>
+                <h2>Portfolio Website</h2>
+                <p>A website built using HTML, CSS, and JavaScript. I learned a lot about new features of HTML you can use like popups and audio elements</p>
+                <a href="https://github.com/snodgmar000/DeveloperPortfolio">GitHub link :D</a>
+                <button class="close-btn" type="button">Close</button>
+            </div>
+            <button class="open-btn" type="button">Portfolio Website</button>
+        </article>
+        <article class="project-item" data-languages="python">
+            <div class="popup">
+                <i class="inner"></i>
+                <h2>Python Project</h2>
+                <p>test</p>
+                <p>A github link would be here this is just a test :3</p>
+                <button class="close-btn" type="button">Close</button>
+            </div>
+            <button class="open-btn" type="button">Python Project</button>
+        </article>
+        <article class="project-item" data-languages="javascript">
+            <div class="popup">
+                <i class="inner"></i>
+                <h2>JavaScript Game</h2>
+                <p>test</p>
+                <p>A github link would be here this is just a test :3</p>
+                <button class="close-btn" type="button">Close</button>
+            </div>
+            <button class="open-btn" type="button">JavaScript Game</button>
+        </article>
     </div>
     <br />
 </body>

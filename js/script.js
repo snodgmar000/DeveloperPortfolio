@@ -46,14 +46,36 @@ if (darkBtn) {
     });
 }
 
-const openBtn = document.getElementById("openbtn");
-const closeBtn = document.getElementById("closebtn");
-const popup = document.querySelector(".popup");
-openBtn.addEventListener("click", () => {
-    popup.style.display = "block";
-    openBtn.style.display = "none";
+const projectItems = document.querySelectorAll(".project-item");
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+projectItems.forEach((projectItem) => {
+    const openBtn = projectItem.querySelector(".open-btn");
+    const closeBtn = projectItem.querySelector(".close-btn");
+    const popup = projectItem.querySelector(".popup");
+
+    openBtn.addEventListener("click", () => {
+        popup.style.display = "block";
+        openBtn.style.display = "none";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+        openBtn.style.display = "block";
+    });
 });
-closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-    openBtn.style.display = "block";
+
+filterButtons.forEach((filterButton) => {
+    filterButton.addEventListener("click", () => {
+        const selectedLanguage = filterButton.dataset.filter;
+
+        filterButtons.forEach((button) => button.classList.remove("active"));
+        filterButton.classList.add("active");
+
+        projectItems.forEach((projectItem) => {
+            const languages = projectItem.dataset.languages.split(" ");
+            const matchesFilter = selectedLanguage === "all" || languages.includes(selectedLanguage);
+            projectItem.hidden = !matchesFilter;
+        });
+    });
 });
